@@ -34,7 +34,7 @@
     <sqlMapGenerator targetPackage="com.yougou" targetProject="code/javaMapper">
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao"  targetProject="code/xmlMapper">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao" targetProject="code/xmlMapper">
     </javaClientGenerator>
 
     <table tableName="TAOBAO_ORDER">
@@ -56,7 +56,7 @@
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="com.yougou"  targetProject="code/javaMapper">
+    <sqlMapGenerator targetPackage="com.yougou" targetProject="code/javaMapper">
     </sqlMapGenerator>
 
     <javaClientGenerator type="XMLMAPPER" targetPackage="com.yougou" targetProject="code/xmlMapper">
