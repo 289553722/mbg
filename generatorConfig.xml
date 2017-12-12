@@ -27,14 +27,14 @@
         password="123456">
     </jdbcConnection>
 
-    <javaModelGenerator targetPackage="com.yougou" targetProject="code/model">
+    <javaModelGenerator targetPackage="com.wind" targetProject="code/model">
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="com.yougou" targetProject="code/javaMapper">
+    <sqlMapGenerator targetPackage="com.wind" targetProject="code/xmlMapper">
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao" targetProject="code/xmlMapper">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.wind" targetProject="code/javaMapper">
     </javaClientGenerator>
 
     <table tableName="TAOBAO_ORDER">
@@ -44,27 +44,5 @@
   </context>
   
 	<!-- oracle -->
-  <context id="oracle" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-    
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-        connectionURL="jdbc:mysql://localhost:3306/tower"
-        userId="root"
-        password="123456">
-    </jdbcConnection>
-
-    <javaModelGenerator targetPackage="com.yougou" targetProject="code/model">
-      <property name="trimStrings" value="true" />
-    </javaModelGenerator>
-
-    <sqlMapGenerator targetPackage="com.yougou" targetProject="code/javaMapper">
-    </sqlMapGenerator>
-
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.yougou" targetProject="code/xmlMapper">
-    </javaClientGenerator>
-
-    <table tableName="TAOBAO_ORDER">
-      <property name="useActualColumnNames" value="false"/>
-      <property name="selectAllOrderByClause" value="id"/>
-    </table>
-  </context>
+  
 </generatorConfiguration>
