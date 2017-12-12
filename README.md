@@ -1,0 +1,2 @@
+# mbg
+mybatis generator tools
