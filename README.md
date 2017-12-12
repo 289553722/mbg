@@ -1,4 +1,4 @@
 # mbg
 mybatis generator tools
 
-mybatis代码生成工具
+mybatis 浠ｇ爜鐢熸垚宸ュ叿
