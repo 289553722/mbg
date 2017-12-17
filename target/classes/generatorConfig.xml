@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 加载数据库驱动或加载根类中的 JavaModelGenerator 检查重写的方法，其它jar不生效 -->
+    <!--
+    <classPathEntry location="mysql-connector-java-5.1.38.jar" />
+    <classPathEntry location="oracle-ojdbc6-11.2.0.3.0.jar" />
+    -->
+    
+    <!-- mysql -->
+    <context id="mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <!-- 是否显示字段注释 -->
+        <property name="addRemarkComments" value="true"/>
+
+        <commentGenerator type="com.wind.generator.MyGenerator">
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ssm"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.wind" targetProject="E:\workSpace\github\mbg\src\test\generated/model">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.wind" targetProject="E:\workSpace\github\mbg\src\test\generated/xmlMapper">
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wind" targetProject="E:\workSpace\github\mbg\src\test\generated/javaMapper">
+        </javaClientGenerator>
+
+        <table tableName="t_ssm_user">
+            <property name="useActualColumnNames" value="false"/>
+            <property name="selectAllOrderByClause" value="id"/>
+        </table>
+    </context>
+
+    <!-- oracle -->
+
+</generatorConfiguration>
