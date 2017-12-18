@@ -11,13 +11,13 @@
     -->
     
     <!-- mysql -->
-    <context id="mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <context id="mysql" targetRuntime="MyBatis3" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
-        <!-- 是否显示字段注释 -->
-        <property name="addRemarkComments" value="true"/>
 
         <commentGenerator type="com.wind.generator.MyGenerator">
+            <!-- 是否显示字段注释 -->
+            <property name="addRemarkComments" value="true"/>
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"

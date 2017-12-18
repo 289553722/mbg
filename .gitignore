@@ -3,5 +3,19 @@
 /code/javaMapper
 /code/xmlMapper
 
-/src/main/java
-/src/main/resources
+#maven
+/target
+/src/main/webapp/WEB-INF/classes
+/src/main/webapp/WEB-INF/lib
+/src/test/generated
+
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+#eclipse
+.settings/
+.classpath
+.project
